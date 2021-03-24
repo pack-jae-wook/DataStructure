@@ -1,14 +1,28 @@
-public class Node <E>{
-   private E       item;
-   private Node<E> next;
-   public Node(E item, Node<E> next) {
-		super();
-		this.item = item;
-		this.next = next;
+package Node;
+
+public class Node<E> {
+	private E item;
+	private Node next;
+
+	public Node(E newItem, Node p) { // 持失切
+		item = newItem;
+		next = p;
 	}
-   public E getItem() { return item; }
-   public Node<E> getNext() {return next;}
-   public void setItem(E newItem) {item = newItem;}
-   public void setNext(Node<E> newNext) {next = newNext;}
-   
+
+// get 五社球人 set 五社球
+	public E getItem() {
+		return item;
+	}
+
+	public Node getNext() {
+		return next;
+	}
+
+	public void setItem(E newItem) {
+		item = newItem;
+	}
+
+	public void setNext(Node newNext) {
+		next = newNext;
+	}
 }
