@@ -1,27 +1,25 @@
-package Node;
+package ArrayQu;
 
 public class main {
 	public static void main(String[] args) {
-		DList<String> s = new DList<String>(); // 이중 연결 리스트 객체 s 생성
-		s.insertAfter(s.head, "apple");
-		s.insertBefore(s.tail, "orange");
-		s.insertBefore(s.tail, "cherry");
-		s.insertAfter(s.head.getNext(), "pear");
-		s.print();
-		System.out.println();
-		s.delete(s.tail.getPrevious());
-		s.print();
-		System.out.println();
-		s.insertBefore(s.tail, "grape");
-		s.print();
-		System.out.println();
-		s.delete(s.head.getNext());
-		s.print();
-		s.delete(s.head.getNext());
-		s.print();
-		s.delete(s.head.getNext());
-		s.print();
-		s.delete(s.head.getNext());
-		s.print();
+		ArrayQueue<String> queue = new ArrayQueue<String>();
+		
+		queue.add("apple");		queue.add("orange");
+		queue.add("cherry");	queue.add("pear");		queue.print();
+		
+		queue.remove();			queue.print();
+		
+		queue.add("grape");		queue.print();
+		
+		queue.remove();			queue.print();
+		
+		queue.add("lemon");		queue.print();
+		queue.add("mango");		queue.print();
+		queue.add("lime");		queue.print();
+		queue.add("kiwi");		queue.print();
+		
+		queue.remove();			queue.print();
+
 	}
+
 }
