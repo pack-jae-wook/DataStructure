@@ -1,17 +1,46 @@
-package ListQ;
 
-public class Node <E> {
-	private E 	item;
-	private Node<E> next;
-	
-	public Node(E newItem, Node<E> node) { // 생성자
-		item = newItem;
-		next = node;
+
+public class Node<Key extends Comparable<Key>, Value> {
+	private Key id;
+	private Value name;
+	private Node<Key, Value> left, right;
+
+	public Node(Key newId, Value newName) { // 노드 생성자
+		id = newId;
+		name = newName;
+		left = right = null;
 	}
-	// get 메소드들과 set 메소드 들
-	public E 	   getItem()			{ return item; }
-	public Node<E> getNext()			{ return next; }
-	public void	   setItem(E newItem)   { item = newItem; }
-	public void    setNext(Node<E> newNext) { next = newNext; }
 
+// get과 set 메소드들
+	public Key getKey() {
+		return id;
+	}
+
+	public Value getValue() {
+		return name;
+	}
+
+	public Node<Key, Value> getLeft() {
+		return left;
+	}
+
+	public Node<Key, Value> getRight() {
+		return right;
+	}
+
+	public void setKey(Key newId) {
+		id = newId;
+	}
+
+	public void setValue(Value newName) {
+		name = newName;
+	}
+
+	public void setLeft(Node<Key, Value> newLeft) {
+		left = newLeft;
+	}
+
+	public void setRight(Node<Key, Value> newRight) {
+		right = newRight;
+	}
 }
